@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Da|Modak"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>drumKit</h1>
+    <div class="keys">
+      <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="sound">clap</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">crash</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="sound">hihat</span>
+      </div>
+      <div data-key="70" class="key">
+        <kbd>F</kbd>
+        <span class="sound">kickDrum</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>G</kbd>
+        <span class="sound">rimShot</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>H</kbd>
+        <span class="sound">snareDrum</span>
+      </div>
+    </div>
+
+    <audio data-key="65" src="sounds/clap.mp3"></audio>
+    <audio data-key="83" src="sounds/crash.mp3"></audio>
+    <audio data-key="68" src="sounds/hihat.mp3"></audio>
+    <audio data-key="70" src="sounds/kickDrum.mp3"></audio>
+    <audio data-key="71" src="sounds/rimShot.mp3"></audio>
+    <audio data-key="72" src="sounds/snareDrum.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: #5cdb95;
+}
+h1 {
+  margin-top: 200px;
+  font-family: Modak;
+  font-size: 80px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+.keys {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.key {
+  display: inline-block;
+  border: 3px solid #05386b;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  overflow: hidden;
+  margin: 4px;
+  box-shadow: 2px 2px 4px #000;
+  text-shadow: 0 0 1px #808080;
+  transition: all 0.07s;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 6px #ffc600;
+}
+.key kbd {
+  font-family: 'Baloo Da';
+  font-size: 32px;
+  color: #edf5e1;
+  text-align: center;
+  display: block;
+}
+.key span {
+  text-transform: uppercase;
+  color: #950740;
+  font-family: 'Baloo Da';
+  font-size: 16px;
+}
