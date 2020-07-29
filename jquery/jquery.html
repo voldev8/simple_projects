@@ -1,0 +1,145 @@
+<html>
+   <head>
+      <title>jQuery</title>
+      <style>
+      .circle {
+        height:200px;
+        width:200px;
+        background-color:#0C9505;
+        border-radius: 100px;
+        margin:20px;
+        float:left;
+      }
+      .square {
+        height:200px;
+        width:200px;
+        background-color:#FF0000;
+        margin:20px;
+        float:left;
+      }
+      iframe {
+        float:left;
+      }
+      .squarea {
+        height:100px;
+        width:100px;
+        background-color:purple;
+        margin:20px;
+        display:inline-block;
+      }
+      p {
+        padding-top:80px;
+        text-align:center;
+      }
+      .container1, .container2, .container3, .container4{
+        border-bottom: 1px solid;
+        height: 300px;
+        clear:both;
+        overflow: auto;
+      }
+      .container4 p {
+        text-align: left;
+        padding:10px 0 0 20px;
+        font-family: fantasy;
+        font-size: 20px;
+      }
+      .container4 #buttonDis {
+        font-family: fantasy;
+        font-size: 24px;
+        padding:4px 16px;
+      }
+      #pHid {
+        display:none;
+      }
+      #buttonHid, #buttonTog {
+        margin-left: 30px;
+      }
+   </style>
+
+   </head>
+   <body>
+     <div class="container1">
+       <div class="circle">
+         <p id="text1">This is some text.</p>
+       </div>
+       <div class="square" id="square1">
+       <p id="text2">this is some more text</p></div>
+     </div>
+     <div class="container2">
+       <div class="square" id="square2"></div>
+       <iframe src="#"></iframe>
+     </div>
+
+     <div class="container3">
+       <div class="square" id="square3"></div>
+       <div class="squarea" id="square4"></div>
+       <div class="squarea" id="square5"></div>
+       <div class="squarea" id="square6"></div>
+     </div>
+     <div class="container4">
+       <p id="pDis">This is a paragraph about to disappear
+         with the click of a <span><button id="buttonDis">button</button></span></p>
+         <p id="pHid">This was a hidden paragraph </p>
+         <button id="buttonHid">click to see the hidden text</button>
+         <div style="margin-top:20px">
+          <p id="toggleText">fade in and out!!</p>
+          <button id="buttonTog">Toggle Text</button>
+         </div>
+     </div>
+     <div class="container5">
+       <div class="circle" id="circleAnimate"></div>
+     </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script type="text/javascript">
+     /*to check if jQuery is working
+         if (typeof jQuery == "undefined") {
+           alert ("jQuery is not installed");
+         } else {
+           alert("jQuery is installed correctly!");
+         }
+      */
+      $("#circle").click(function(){
+        $("#circle").css("width","300px");
+      });
+      $("#square1").hover(function(){
+        $("#text2").html("New text again!");
+      });
+      $("#square2").click(function(){
+        $("iframe").attr("src","http://www.ntvspor.net");
+      });
+      $("#square3").click(function(){
+        alert($("body").css("width"));
+      });
+      $(".squarea").click(function(){
+        $(this).css("display","none");
+      });
+      $("#buttonDis").click(function(){
+        $("#pDis").fadeOut("slow");
+      });
+      $("#buttonHid").click(function(){
+        $("#pHid").fadeIn("slow");
+      });
+      var textShowing = true;
+      $("#buttonTog").click(function(){
+        if (textShowing){
+          $("#toggleText").fadeOut(function(){
+            textShowing = false;
+          });
+        } else {
+          $("#toggleText").fadeIn(function(){
+            textShowing = true;
+          });
+        };
+      });
+      $("#circleAnimate").click(function(){
+        $(this).animate({
+          width:"300px",
+          marginTop:"50px"
+        }, 2000, function(){
+          $(this).css("background-color","red");
+        });
+      });
+
+     </script>
+   </body>
+</html>
